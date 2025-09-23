@@ -1,6 +1,7 @@
 import './App.css';
 import ClassComponent from './classComponent';
 import {useState} from 'react'
+import FunctionalComponent from './functionalComponent';
 
 function App() {
   const name = "vikrant";
@@ -8,7 +9,17 @@ function App() {
   return (
     <div>
         <button onClick={()=>setShowHide(!showhide)}>show/hide</button>
-       { showhide? <ClassComponent  name={name}/>:''}
+    
+       { 
+       
+       showhide? 
+         <>
+       <ClassComponent  name={name}/> 
+       <FunctionalComponent/>   </>:''
+      
+       }
+      
+       
     </div>
   );
 }
